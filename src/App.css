@@ -1,0 +1,96 @@
+body{
+  background-color: #383838;
+  color: #FEFEFE;
+  justify-content: center;
+  align-items: center;
+}
+
+div.todo-app{
+  margin: 20px auto;
+}
+h1, h2{
+  text-align: center;
+}
+form{
+  border: 1px solid #202020;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  width: 50%;
+}
+form input[type='text']{
+ background: none;
+ border: 0 transparent;
+ width: 100%;
+ display: block;
+ color: rgb(255, 255, 255);
+}
+form button{
+  background-color: #9BEEFE;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer; 
+}
+
+div.task{
+  background-color: #7c7c7c;
+  border-radius: 12px;
+  margin-top: 5px;
+  padding: 5px 9px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  transition: opacity .3s linear;
+}
+
+div.task svg{
+  height: 20px;
+  margin: 4px;
+  fill: #9BEEFE;
+}
+ div.checkbox{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+ }
+div.task.done{
+  opacity: 0.3;
+}
+div.task span{
+  position: relative;
+}
+div.task-name, div.task form{
+  flex-grow: 1;
+}
+
+div.task span:before{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  top:10px;
+  transition: width .5s linear
+
+}
+div.task.done span:before{
+  width: 100%;
+}
+
+div.task input{
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+button.trash-icon{
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+
+button.trash-icon svg{
+  fill: rgb(78, 78, 78);
+}
